@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="Apollo11.Module.BusinessObjects.Order">
+      <OwnMembers>
+        <Member Name="Amount" EditMask="n4" DisplayFormat="{0:n4}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Apollo11.Module.BusinessObjects.Trade.ArbitrageTrade">
+      <OwnMembers>
+        <Member Name="ProfitPercent" DisplayFormat="{0:n4}" EditMask="n4" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="MainDashBaord" ViewId="MainDashBaord" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options Skin="Visual Studio 2013 Blue" UIType="TabbedMDI" FormStyle="Ribbon">
+    <RibbonOptions RibbonControlStyle="Office2013" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="16.1.8.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="ArbitrageTrade_DetailView">
+      <Items>
+        <PropertyEditor Id="BuyFrom.CurrentOrder" PropertyName="BuyFrom.CurrentOrder" Caption="Current Buy Order" View="Exchange_CurrentOrder_ListView_Sell" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.Amount" PropertyName="BuyTrade.Amount" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.BitcoinPrice" PropertyName="BuyTrade.BitcoinPrice" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.BitcoinPriceCad" PropertyName="BuyTrade.BitcoinPriceCad" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.BuyOrder.Amount" PropertyName="BuyTrade.BuyOrder.Amount" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.BuyOrder.DateAdded" PropertyName="BuyTrade.BuyOrder.DateAdded" EditMask="u" DisplayFormat="{0:u}" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.BuyOrder.Exchange" PropertyName="BuyTrade.BuyOrder.Exchange" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.BuyOrder.Price" PropertyName="BuyTrade.BuyOrder.Price" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.BuyOrder.Value" PropertyName="BuyTrade.BuyOrder.Value" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.Fee" PropertyName="BuyTrade.Fee" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.FeeCad" PropertyName="BuyTrade.FeeCad" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.Total" PropertyName="BuyTrade.Total" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.TotalCad" PropertyName="BuyTrade.TotalCad" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.TotalWithFeeCad" PropertyName="BuyTrade.TotalWithFeeCad" IsNewNode="True" />
+        <PropertyEditor Id="BuyTrade.TradeType" PropertyName="BuyTrade.TradeType" IsNewNode="True" />
+        <PropertyEditor Id="SellTo.CurrentOrder" PropertyName="SellTo.CurrentOrder" Caption="Current Sell Order" View="Exchange_CurrentOrder_ListView_Buy" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.Amount" PropertyName="SellTrade.Amount" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.BitcoinPrice" PropertyName="SellTrade.BitcoinPrice" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.BitcoinPriceCad" PropertyName="SellTrade.BitcoinPriceCad" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.Fee" PropertyName="SellTrade.Fee" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.FeeCad" PropertyName="SellTrade.FeeCad" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.SellOrder.Amount" PropertyName="SellTrade.SellOrder.Amount" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.SellOrder.DateAdded" PropertyName="SellTrade.SellOrder.DateAdded" DisplayFormat="{0:u}" EditMask="u" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.SellOrder.Exchange" PropertyName="SellTrade.SellOrder.Exchange" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.SellOrder.Price" PropertyName="SellTrade.SellOrder.Price" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.SellOrder.Value" PropertyName="SellTrade.SellOrder.Value" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.Total" PropertyName="SellTrade.Total" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.TotalCad" PropertyName="SellTrade.TotalCad" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.TotalWithFeeCad" PropertyName="SellTrade.TotalWithFeeCad" IsNewNode="True" />
+        <PropertyEditor Id="SellTrade.TradeType" PropertyName="SellTrade.TradeType" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ArbitrageTrade" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="ArbitrageTrade_col1" RelativeSize="100" Caption="ArbitrageTrade_col1">
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="14.039125431530495" Caption="Exchange" IsNewNode="True">
+                  <LayoutItem Id="Created" ViewItem="Created" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
+                  <LayoutItem Id="BuyFrom" ViewItem="BuyFrom" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                  <LayoutItem Id="SellTo" ViewItem="SellTo" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Amount" RelativeSize="4.2704626334519569" Index="1" Removed="True" />
+                <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="20.713463751438436" Caption="Amounts" IsNewNode="True">
+                  <LayoutItem Id="Amount" ViewItem="Amount" Index="0" RelativeSize="20.779220779220779" IsNewNode="True" />
+                  <LayoutItem Id="MarketAmount" ViewItem="MarketAmount" Index="1" RelativeSize="15.584415584415584" IsNewNode="True" />
+                  <LayoutItem Id="MaxAmount" ViewItem="MaxAmount" Index="2" RelativeSize="15.584415584415584" IsNewNode="True" />
+                  <LayoutGroup Id="Item6" ShowCaption="True" Caption="Profit" CaptionLocation="Top" Index="3" RelativeSize="48.051948051948052" Direction="Horizontal" IsNewNode="True">
+                    <LayoutItem Id="Profit" ViewItem="Profit" Index="0" RelativeSize="49.901380670611438" IsNewNode="True" />
+                    <LayoutItem Id="ProfitPercent" ViewItem="ProfitPercent" Index="1" RelativeSize="50.098619329388562" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="65.247410817031067" Caption="Trade details" Direction="Vertical" IsNewNode="True">
+                  <LayoutGroup Id="Auto78d27487-3962-4415-8a98-d40ab412ac18" ShowCaption="False" Caption="Auto78d27487-3962-4415-8a98-d40ab412ac18(16)" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutGroup Id="Item4" ShowCaption="True" Caption="Buy Trade" CaptionLocation="Top" Index="0" RelativeSize="51.789077212806028" IsNewNode="True">
+                      <LayoutItem Id="BuyTrade.BuyOrder.Exchange" ViewItem="BuyTrade.BuyOrder.Exchange" Index="0" RelativeSize="6.5173116089613039" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.BuyOrder.DateAdded" ViewItem="BuyTrade.BuyOrder.DateAdded" Index="1" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.Amount" ViewItem="BuyTrade.Amount" Index="2" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.BitcoinPrice" ViewItem="BuyTrade.BitcoinPrice" Index="3" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.BitcoinPriceCad" ViewItem="BuyTrade.BitcoinPriceCad" Index="4" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.Fee" ViewItem="BuyTrade.Fee" Index="5" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.FeeCad" ViewItem="BuyTrade.FeeCad" Index="6" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.Total" ViewItem="BuyTrade.Total" Index="7" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.TotalCad" ViewItem="BuyTrade.TotalCad" Index="8" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="BuyTrade.TotalWithFeeCad" ViewItem="BuyTrade.TotalWithFeeCad" Index="9" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutGroup Id="Item7" ShowCaption="True" CaptionLocation="Top" Index="10" RelativeSize="23.217922606924642" Caption="Order Book Order" IsNewNode="True">
+                        <LayoutItem Id="BuyTrade.BuyOrder.Amount" ViewItem="BuyTrade.BuyOrder.Amount" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
+                        <LayoutItem Id="BuyTrade.BuyOrder.Price" ViewItem="BuyTrade.BuyOrder.Price" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                        <LayoutItem Id="BuyTrade.BuyOrder.Value" ViewItem="BuyTrade.BuyOrder.Value" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                      </LayoutGroup>
+                      <LayoutGroup Id="Item9" ShowCaption="True" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="11" RelativeSize="26.272912423625254" Caption="Exchnage Order hitstory" IsNewNode="True">
+                        <LayoutItem Id="BuyFrom.CurrentOrder" ViewItem="BuyFrom.CurrentOrder" Index="0" RelativeSize="100" IsNewNode="True" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item5" ShowCaption="True" Caption="Sell Trade" CaptionLocation="Top" Index="1" RelativeSize="48.210922787193972" IsNewNode="True">
+                      <LayoutItem Id="SellTrade.SellOrder.Exchange" ViewItem="SellTrade.SellOrder.Exchange" Index="0" RelativeSize="6.5173116089613039" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.SellOrder.DateAdded" ViewItem="SellTrade.SellOrder.DateAdded" Index="1" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.Amount" ViewItem="SellTrade.Amount" Index="2" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.BitcoinPrice" ViewItem="SellTrade.BitcoinPrice" Index="3" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.BitcoinPriceCad" ViewItem="SellTrade.BitcoinPriceCad" Index="4" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.Fee" ViewItem="SellTrade.Fee" Index="5" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.FeeCad" ViewItem="SellTrade.FeeCad" Index="6" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.Total" ViewItem="SellTrade.Total" Index="7" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.TotalCad" ViewItem="SellTrade.TotalCad" Index="8" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutItem Id="SellTrade.TotalWithFeeCad" ViewItem="SellTrade.TotalWithFeeCad" Index="9" RelativeSize="4.8879837067209779" IsNewNode="True" />
+                      <LayoutGroup Id="Item8" ShowCaption="True" CaptionLocation="Top" Index="10" RelativeSize="23.217922606924642" Caption="Order book Order" IsNewNode="True">
+                        <LayoutItem Id="SellTrade.SellOrder.Amount" ViewItem="SellTrade.SellOrder.Amount" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
+                        <LayoutItem Id="SellTrade.SellOrder.Price" ViewItem="SellTrade.SellOrder.Price" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                        <LayoutItem Id="SellTrade.SellOrder.Value" ViewItem="SellTrade.SellOrder.Value" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                      </LayoutGroup>
+                      <LayoutGroup Id="Item10" ShowCaption="True" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="11" RelativeSize="26.272912423625254" Caption="Exchange Order History" IsNewNode="True">
+                        <LayoutItem Id="SellTo.CurrentOrder" ViewItem="SellTo.CurrentOrder" Index="0" RelativeSize="100" IsNewNode="True" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="BuyFrom" RelativeSize="3.3898305084745761" Removed="True" />
+                <LayoutItem Id="BuyTrade" RelativeSize="85.31073446327683" Removed="True" />
+                <LayoutItem Id="Created" RelativeSize="4.5197740112994351" Removed="True" />
+                <LayoutItem Id="SellTo" RelativeSize="3.3898305084745761" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ArbitrageTrade_col2" RelativeSize="50" Caption="ArbitrageTrade_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Profit" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="MarketAmount" Index="1" RelativeSize="3.3898305084745761" Removed="True" />
+                <LayoutItem Id="MaxAmount" Index="1" RelativeSize="94.306049822064054" Removed="True" />
+                <LayoutItem Id="SellTrade" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Exchange_CurrentOrder_ListView_Buy" ClassName="Apollo11.Module.BusinessObjects.Order" Criteria="[OrderType.Name] = 'Buy' And [DateAdded] &gt; AddDays('@CurrentDate', -1)" DataAccessMode="Server" TopReturnedObjects="2" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Exchange" PropertyName="Exchange" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DateAdded" PropertyName="DateAdded" Width="70" Index="0" EditMask="T" DisplayFormat="{0:T}" IsNewNode="True" />
+        <ColumnInfo Id="OrderType" PropertyName="OrderType" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Amount" PropertyName="Amount" Width="50" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Price" PropertyName="Price" Width="50" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="Value" PropertyName="Value" Width="50" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="OrderBook" PropertyName="OrderBook" Width="70" Index="5" IsNewNode="True" />
+      </Columns>
+      <Sorting IsNewNode="True">
+        <SortProperty Id="DateAdded" PropertyName="DateAdded" Direction="Ascending" Index="1" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+    <ListView Id="Exchange_CurrentOrder_ListView_Sell" ClassName="Apollo11.Module.BusinessObjects.Order" Criteria="[OrderType.Name] = 'Sell' And [DateAdded] &gt; AddDays('@CurrentDate', -1)" DataAccessMode="Server" TopReturnedObjects="2" AllowNew="False" AllowUnlink="False" AllowDelete="True" AllowEdit="False" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Exchange" PropertyName="Exchange" Width="70" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="DateAdded" PropertyName="DateAdded" Width="70" Index="0" EditMask="T" DisplayFormat="{0:T}" IsNewNode="True" />
+        <ColumnInfo Id="OrderType" PropertyName="OrderType" Width="70" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Amount" PropertyName="Amount" Width="50" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Price" PropertyName="Price" Width="50" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="Value" PropertyName="Value" Width="50" Index="4" IsNewNode="True" />
+        <ColumnInfo Id="OrderBook" PropertyName="OrderBook" Width="70" Index="5" IsNewNode="True" />
+      </Columns>
+      <Sorting IsNewNode="True">
+        <SortProperty Id="DateAdded" PropertyName="DateAdded" Direction="Ascending" Index="1" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+    <DetailView Id="Exchange_DetailView">
+      <Items>
+        <PropertyEditor Id="CurrentOrder" Caption="Current Sell Order" Removed="True" />
+        <PropertyEditor Id="CurrentOrder_Buy" PropertyName="CurrentOrder" Caption="Current Buy Order" AllowEdit="False" ImmediatePostData="True" View="Exchange_CurrentOrder_ListView_Buy" IsNewNode="True" />
+        <PropertyEditor Id="CurrentOrder_Sell" PropertyName="CurrentOrder" Caption="Current Sell Order" AllowEdit="False" ImmediatePostData="True" View="Exchange_CurrentOrder_ListView_Sell" IsNewNode="True" />
+        <PropertyEditor Id="ServerResponseTimestamp" EditMaskType="DateTime" EditMask="s" DisplayFormat="{0:s}" />
+        <PropertyEditor Id="TradingFee" EditMask="n4" DisplayFormat="{0:n4}" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="45.033112582781456">
+            <LayoutGroup Id="Exchange" RelativeSize="100">
+              <LayoutGroup Id="Exchange_col1" RelativeSize="50">
+                <LayoutItem Id="Name" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="Website" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="APIKey" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="BTCHolding" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="DollarHolding" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="ExchangeType" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="OrderBook" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Volume" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Low" RelativeSize="13.793103448275861" />
+              </LayoutGroup>
+              <LayoutGroup Id="Exchange_col2" RelativeSize="50">
+                <LayoutItem Id="Last" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Ask" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Bid" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="OrderSpreadPercentage" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="OrderSpreadValue" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="PriceAverage" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="ServerResponseTimestamp" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Open" RelativeSize="13.793103448275861" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="54.966887417218544">
+            <LayoutGroup Id="CurrentOrder" TextAlignMode="AlignWithChildren" RelativeSize="100" Caption="Current Order">
+              <LayoutItem Id="CurrentOrder_Buy" ViewItem="CurrentOrder_Buy" Index="0" RelativeSize="49.826989619377166" IsNewNode="True" />
+              <LayoutItem Id="CurrentOrder_Sell" ViewItem="CurrentOrder_Sell" Index="1" RelativeSize="50.173010380622834" IsNewNode="True" />
+              <LayoutItem Id="CurrentOrder" RelativeSize="22.837370242214533" Index="2" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Trade" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="Trade" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Exchange_DetailView_NoData" ClassName="Apollo11.Module.BusinessObjects.Exchange" IsNewNode="True">
+      <Items IsNewNode="True">
+        <PropertyEditor Id="APIKey" PropertyName="APIKey" IsNewNode="True" />
+        <PropertyEditor Id="Ask" PropertyName="Ask" IsNewNode="True" />
+        <PropertyEditor Id="Bid" PropertyName="Bid" IsNewNode="True" />
+        <PropertyEditor Id="BTCHolding" PropertyName="BTCHolding" IsNewNode="True" />
+        <PropertyEditor Id="CurrentOrder_Buy" PropertyName="CurrentOrder" Caption="Current Buy Order" AllowEdit="False" ImmediatePostData="True" View="Exchange_CurrentOrder_ListView_Buy" IsNewNode="True" />
+        <PropertyEditor Id="CurrentOrder_Sell" PropertyName="CurrentOrder" Caption="Current Sell Order" AllowEdit="False" ImmediatePostData="True" View="Exchange_CurrentOrder_ListView_Sell" IsNewNode="True" />
+        <PropertyEditor Id="DollarHolding" PropertyName="DollarHolding" IsNewNode="True" />
+        <PropertyEditor Id="ExchangeType" PropertyName="ExchangeType" IsNewNode="True" />
+        <PropertyEditor Id="High" PropertyName="High" IsNewNode="True" />
+        <PropertyEditor Id="Last" PropertyName="Last" IsNewNode="True" />
+        <PropertyEditor Id="LiveData" PropertyName="LiveData" IsNewNode="True" />
+        <PropertyEditor Id="Low" PropertyName="Low" IsNewNode="True" />
+        <PropertyEditor Id="Name" PropertyName="Name" IsNewNode="True" />
+        <PropertyEditor Id="Open" PropertyName="Open" IsNewNode="True" />
+        <PropertyEditor Id="OrderBook" PropertyName="OrderBook" IsNewNode="True" />
+        <PropertyEditor Id="OrderSpreadPercentage" PropertyName="OrderSpreadPercentage" IsNewNode="True" />
+        <PropertyEditor Id="OrderSpreadValue" PropertyName="OrderSpreadValue" IsNewNode="True" />
+        <PropertyEditor Id="PriceAverage" PropertyName="PriceAverage" IsNewNode="True" />
+        <PropertyEditor Id="ServerResponseTimestamp" PropertyName="ServerResponseTimestamp" EditMaskType="DateTime" EditMask="s" DisplayFormat="{0:s}" IsNewNode="True" />
+        <PropertyEditor Id="Trade" PropertyName="Trade" View="Exchange_Trade_ListView" IsNewNode="True" />
+        <PropertyEditor Id="TradingFee" PropertyName="TradingFee" EditMask="n4" DisplayFormat="{0:n4}" IsNewNode="True" />
+        <PropertyEditor Id="Volume" PropertyName="Volume" IsNewNode="True" />
+        <PropertyEditor Id="Website" PropertyName="Website" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+          <TabbedGroup Id="Tabs" Index="0" RelativeSize="100" IsNewNode="True">
+            <LayoutGroup Id="CurrentOrder" Index="0" ShowCaption="True" TextAlignMode="AlignWithChildren" RelativeSize="100" Caption="Current Order" IsNewNode="True">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="49.186256781193492" Caption="Buy" IsNewNode="True">
+                <LayoutItem Id="CurrentOrder_Buy" ViewItem="CurrentOrder_Buy" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="50.813743218806508" Caption="Sell" IsNewNode="True">
+                <LayoutItem Id="CurrentOrder_Sell" ViewItem="CurrentOrder_Sell" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Trade" Index="1" ShowCaption="True" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Trade" ViewItem="Trade" ShowCaption="False" Index="0" TextAlignMode="AutoSize" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Exchange_ListView" DataAccessMode="DataView">
+      <Columns>
+        <ColumnInfo Id="ServerResponseTimestamp" EditMaskType="DateTime" EditMask="s" DisplayFormat="{0:s}" ImmediatePostData="True" />
+      </Columns>
+    </ListView>
+    <DashboardView Id="MainDashBaord" IsNewNode="True">
+      <Items IsNewNode="True">
+        <DashboardViewItem Id="ArbaerageTrade" ViewId="ArbitrageTrade_ListView" Caption="ArbaerageTrade" IsNewNode="True" />
+        <DashboardViewItem Id="BitStamp" Criteria="[Name] = 'BitStamp'" Caption="BitStamp" ViewId="Exchange_DetailView_NoData" IsNewNode="True" />
+        <DashboardViewItem Id="quadrigacx.com" Criteria="[Name] = 'quadrigacx.com'" Caption="quadrigacx.com" ViewId="Exchange_DetailView_NoData" IsNewNode="True" />
+        <DashboardViewItem Id="Trades" ViewId="Trade_ListView" Caption="Trades" Criteria="[LiveTrade] = True" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" ShowCaption="False" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="100" IsNewNode="True">
+          <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="100" Direction="Horizontal" IsNewNode="True">
+            <LayoutGroup Id="Auto9e057a9e-ca60-42a0-bc2a-0c5bf73da8e0" ShowCaption="False" Caption="Auto9e057a9e-ca60-42a0-bc2a-0c5bf73da8e0(4)" Index="0" RelativeSize="51.06666666666667" TextAlignMode="AlignWithChildren" IsNewNode="True">
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="49.06666666666667" Caption="BitStamp" IsNewNode="True">
+                <LayoutItem Id="BitStamp" ViewItem="BitStamp" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="50.93333333333333" Caption="quadrigacx" IsNewNode="True">
+                <LayoutItem Id="quadrigacx.com" ViewItem="quadrigacx.com" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Auto06a51e41-4899-45de-a0fd-fc47095db62a" ShowCaption="False" Caption="Auto06a51e41-4899-45de-a0fd-fc47095db62a(6)" Index="1" RelativeSize="48.93333333333333" TextAlignMode="AlignWithChildren" IsNewNode="True">
+              <LayoutItem Id="ArbaerageTrade" ViewItem="ArbaerageTrade" Index="0" RelativeSize="48.8" IsNewNode="True" />
+              <LayoutItem Id="Trades" ViewItem="Trades" Index="1" RelativeSize="51.2" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+</Application>

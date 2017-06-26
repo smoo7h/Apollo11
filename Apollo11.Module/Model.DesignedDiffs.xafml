@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Apollo11" Logo="ExpressAppLogo">
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="Event_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="16.1.8.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

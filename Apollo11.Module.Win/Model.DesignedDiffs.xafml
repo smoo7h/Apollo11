@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="16.1.8.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="16.1.8.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="ArbitrageTrade_DetailView">
+      <Items>
+        <PropertyEditor Id="Created" DisplayFormat="{0:F}" EditMask="F" />
+      </Items>
+    </DetailView>
+    <ListView Id="ArbitrageTrade_ListView" DataAccessMode="DataView">
+      <Columns>
+        <ColumnInfo Id="BuyTrade" Index="-1" />
+        <ColumnInfo Id="SellTrade" Index="-1" />
+        <ColumnInfo Id="Created" EditMaskType="DateTime" EditMask="F" DisplayFormat="{0:F}" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
